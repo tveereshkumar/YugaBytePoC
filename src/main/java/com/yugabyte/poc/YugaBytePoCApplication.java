@@ -28,7 +28,7 @@ public class YugaBytePoCApplication {
             doInsert();
 
             //Perform Read Requests
-            doRead();
+            //doRead();
 
         } catch (Exception e) {
             logger.error("Error inside the main function : ", e);

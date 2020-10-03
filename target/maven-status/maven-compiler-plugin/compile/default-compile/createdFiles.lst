@@ -1,0 +1,5 @@
+com/yugabyte/poc/threads/SimpleReadThread.class
+com/yugabyte/poc/YugaBytePoCApplication.class
+com/yugabyte/poc/util/GlobalConstant.class
+com/yugabyte/poc/util/YugaByteDBConfig.class
+com/yugabyte/poc/threads/InsertThread.class

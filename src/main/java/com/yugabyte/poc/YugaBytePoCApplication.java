@@ -56,7 +56,7 @@ public class YugaBytePoCApplication {
             statement.execute("============= DROP TABLE IF EXISTS ============");
             statement.execute(YugaByteDBConfig.USER_TABLE_QUERY);
         } catch (Exception e) {
-
+            logger.error("Error on createTable \n", e);
         }
     }
 

@@ -22,7 +22,7 @@ public class YugaBytePoCApplication {
             init();
 
             //Create Table
-            createTable();
+            //createTable();
 
             //Insert Data into table
             doInsert();
@@ -53,7 +53,8 @@ public class YugaBytePoCApplication {
         try {
             Connection connection = DriverManager.getConnection(YugaByteDBConfig.JDBC_URL_LIST[0] + YugaByteDBConfig.DATABASE_NAME, props);
             Statement statement = connection.createStatement();
-            statement.execute("============= DROP TABLE IF EXISTS ============");
+            statement.execute("DROP TABLE IF EXISTS");
+            statement.execute("CREATE SEQUENCE table_name_id_seq");
             statement.execute(YugaByteDBConfig.USER_TABLE_QUERY);
         } catch (Exception e) {
             logger.error("Error on createTable \n", e);

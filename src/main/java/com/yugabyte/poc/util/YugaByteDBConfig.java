@@ -7,5 +7,5 @@ public interface YugaByteDBConfig {
     String DATABASE_NAME = "test";
     String DB_USER_NAME = "yugabyte";
     String DB_PASSWORD = "";
-    String USER_TABLE_QUERY = "CREATE TABLE IF NOT EXISTS user_master(user_id int serial primary key, name varchar, age int, language text) ";
+    String USER_TABLE_QUERY = "CREATE TABLE user_master(user_id int NOT NULL DEFAULT nextval('table_name_id_seq') primary key, name varchar, age int, language text)";
 }

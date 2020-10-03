@@ -33,7 +33,7 @@ public class InsertThread implements Runnable {
             Random age = new Random(100);
             long startTime = System.currentTimeMillis();
             for (int i = 0; i <= count; i++) {
-                PreparedStatement statement = conn.prepareStatement("INSERT INTO user_master (name, age, language) VALUES (?, ?, ?)");
+                PreparedStatement statement = conn.prepareStatement("INSERT INTO public.user_master (name, age, language) VALUES (?, ?, ?)");
                 statement.setString(1, "Test User "+Math.abs(rand.nextInt()));
                 statement.setInt(2, age.nextInt());
                 statement.setString(3, "English "+Math.abs(rand.nextInt()));

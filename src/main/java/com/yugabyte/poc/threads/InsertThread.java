@@ -36,6 +36,7 @@ public class InsertThread implements Runnable {
                 statement.setInt(2, age.nextInt());
                 statement.setString(3, "English "+Math.abs(rand.nextInt()));
                 statement.execute();
+                logger.info("inserting records : "+i);
             }
 
             //Displaying the Time Taken for the Complete

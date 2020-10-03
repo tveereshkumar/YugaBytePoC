@@ -21,7 +21,9 @@ public class InsertThread implements Runnable {
         try {
             Class.forName("org.postgresql.Driver");
             Random ip = new Random();
-            Connection conn = DriverManager.getConnection(YugaByteDBConfig.JDBC_URL_LIST[Math.abs(ip.nextInt(3))]+YugaByteDBConfig.DATABASE_NAME,
+            String ipHost = YugaByteDBConfig.JDBC_URL_LIST[Math.abs(ip.nextInt(3))]+YugaByteDBConfig.DATABASE_NAME;
+            logger.info("ipHose : "+ipHost);
+            Connection conn = DriverManager.getConnection(ipHost,
                                                           YugaByteDBConfig.DB_USER_NAME,
                                                           YugaByteDBConfig.DB_PASSWORD);
             logger.info("Connected to the PostgreSQL server successfully.");
